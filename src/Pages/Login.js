@@ -54,13 +54,16 @@ const Login = () => {
             value={email}
             required
           />
-        </div>
-
+        <p className="mt-4 text-right text-sm text-gray-600">
+          <Link to="/forgot" className="text-blue-500 hover:text-blue-700">
+            Forgot Passowrd?
+          </Link>
+          </p>
         <div className="mb-4">
           <label
             className="block mb-2 text-sm font-medium text-gray-700"
             htmlFor="password"
-          >
+            >
             Password
           </label>
           <input
@@ -73,8 +76,9 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             required
-          />
+            />
         </div>
+            </div>
 
         {error && (
           <p className="mb-4 text-red-500 text-sm">{error}</p>
