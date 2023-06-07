@@ -9,16 +9,24 @@ const RegisterPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  // checking if user is already logged in and redirecting to home page
   useEffect(() => {
     if (firebase.isLoggedIn) {
       navigate('/');
     }
   }, [firebase, navigate]);
 
+  // Event handler for form submission
   const formSubmit = async (e) => {
     e.preventDefault();
-    await firebase.signupUserWithEmailAndPassword(userName, email, password);
-    console.log('Signin Success');
+
+    try {
+      // Call Firebase function to sign up user with username, email, and password
+      await firebase.signupUserWithEmailAndPassword(userName, email, password);
+      console.log('Signin Success');
+    } catch (error) {
+      console.error('Signup Error:', error);
+    }
   };
 
   return (
@@ -91,6 +99,7 @@ const RegisterPage = () => {
             Register
           </button>
         </div>
+
         <div className="flex justify-center mt-4">
           <button
             className="px-6 py-3 text-white bg-red-500 rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-300"
@@ -100,8 +109,9 @@ const RegisterPage = () => {
             Register with Google
           </button>
         </div>
+
         <p className="mt-4 text-center text-sm text-gray-600">
-          Already Have an account? {' '}
+          Already have an account?{' '}
           <Link to="/login" className="text-blue-500 hover:text-blue-700">
             Login
           </Link>

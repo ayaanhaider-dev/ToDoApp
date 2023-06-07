@@ -15,6 +15,7 @@ const ForgotPassword = () => {
     event.preventDefault();
 
     try {
+      // Call the Firebase function to reset the password
       await firebase.resetPassword(email);
       setSuccess(true);
       setError('');
@@ -32,12 +33,14 @@ const ForgotPassword = () => {
       >
         <h2 className="text-2xl font-bold mb-8 text-center">Forgot Password</h2>
 
+        {/* Display success message if password reset email is sent */}
         {success && (
           <div className="bg-green-100 text-green-800 px-4 py-3 mb-4 rounded">
             Password reset email sent. Please check your inbox.
           </div>
         )}
 
+        {/* Display error message if there is an error */}
         {error && (
           <div className="bg-red-100 text-red-800 px-4 py-3 mb-4 rounded">
             {error}
