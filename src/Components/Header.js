@@ -54,7 +54,7 @@ const Header = () => {
                 Home
               </Link>
               <Link
-                to="https://www.highrevenuegate.com/u1kfxwcti?key=5f6c43b068192a774117f5dbcba0b99e"
+                to="/about"
                 className={`${
                   location.pathname === "/about" ? "bg-teal-400 rounded" : ""
                 } text-gray-800 block py-2 px-4 hover:bg-gray-200`}
@@ -103,7 +103,7 @@ const Header = () => {
             Home
           </Link>
           <Link
-            to="https://www.highrevenuegate.com/u1kfxwcti?key=5f6c43b068192a774117f5dbcba0b99e"
+            to="/about"
             className={`${
               location.pathname === "/about" ? "bg-teal-400 rounded" : ""
             } text-white hover:text-gray-300 px-4 py-2 block md:inline-block`}
