@@ -188,17 +188,17 @@ const Home = () => {
                     {/* Complete/uncomplete button */}
                     {!todo.completed ? (
                       <button
-                        className="text-green-500 hover:text-green-700 mr-2"
+                        className="text-yellow-500 hover:text-yellow-700 mr-2"
                         onClick={() => handleCompleteTodo(todo.id)}
                       >
-                        Completed
+                        UnComplete
                       </button>
                     ) : (
                       <button
-                        className="text-yellow-500 hover:text-yellow-700 mr-2"
+                        className="text-green-500 hover:text-green-700 mr-2"
                         onClick={() => handleUncompleteTodo(todo.id)}
                       >
-                        Uncomplete
+                        Completed
                       </button>
                     )}
                     <div>
