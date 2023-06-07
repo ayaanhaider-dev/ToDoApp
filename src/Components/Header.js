@@ -28,7 +28,7 @@ const Header = () => {
     <header className="bg-gray-800 py-4">
       <nav className="flex items-center justify-between px-4 md:px-8">
         <Link to="/">
-        <h1 className="text-white text-3xl font-bold">Todo App</h1>
+        <h1 className="text-white text-4xl font-bold">Todo App</h1>
         </Link>
 
         <div className="md:hidden relative">
