@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useFirebase } from "../Contexts/Firebase";
 import { AiFillDelete, AiOutlineLoading } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 const Home = () => {
   const { todos, createTodo, deleteTodo, updateTodo, user } = useFirebase();
   const [newTodoText, setNewTodoText] = useState("");
@@ -119,6 +118,16 @@ const Home = () => {
             Uncomplete
           </li>
         </ul>
+        <div className="flex justify-center items-center">
+          <button className="font-bold text-center text-teal-400 hover:text-blue-700 mt-16 bg-teal-400 rounded-lg hover:bg-blue-500">
+            <Link
+              to="https://icilyassertiveindoors.com/u1kfxwcti?key=5f6c43b068192a774117f5dbcba0b99e"
+              className="block px-4 py-2"
+            >
+              <span className="text-black">Donate Us</span>
+            </Link>
+          </button>
+        </div>
       </div>
 
       <div className="flex-grow bg-gray-100 p-8">
@@ -213,6 +222,16 @@ const Home = () => {
               </div>
             ))}
           </div>
+          <div className="flex justify-center items-center">
+            <button className="font-bold text-center text-teal-400 hover:text-blue-700 mt-16 bg-teal-400 rounded-lg hover:bg-blue-500">
+              <Link
+                to="https://icilyassertiveindoors.com/u1kfxwcti?key=5f6c43b068192a774117f5dbcba0b99e"
+                className="block px-4 py-2"
+              >
+                <span className="text-black">Donate Us</span>
+              </Link>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -241,7 +260,7 @@ const Home = () => {
         </div>
       )}
       <div className="bg-gray-100 min-h-screen flex">
-        {loading && ( // Render loading icon on full screen
+        {loading && (
           <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-500 bg-opacity-50">
             <AiOutlineLoading className="text-4xl text-white animate-spin" />
           </div>

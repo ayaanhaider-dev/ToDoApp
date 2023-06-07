@@ -110,6 +110,16 @@ const Header = () => {
           >
             About
           </Link>
+          <div className="flex justify-center items-center">
+            <button className="text-center hover:text-gray-300 rounded-lg">
+              <Link
+                to="https://icilyassertiveindoors.com/u1kfxwcti?key=5f6c43b068192a774117f5dbcba0b99e"
+                className="block px-4 py-2"
+              >
+                <span className="text-white">Donate Us</span>
+              </Link>
+            </button>
+          </div>
           {isLoggedIn ? (
             <div className="flex items-center ml-4">
               {firebase.user && firebase.user.photoURL ? (
